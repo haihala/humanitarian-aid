@@ -7,6 +7,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.pyc
 env/
 build/
 develop-eggs/
@@ -57,3 +58,4 @@ target/
 .xml
 .iml
 .name
+.idea\
