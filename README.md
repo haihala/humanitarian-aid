@@ -1,2 +1,2 @@
 # humanitarian-aid
-Päivölä mathematical schools git repository for the whatif workshops modeling projects. All projects should be combined to this repo.
+Päivölä mathematical schools git repository for the What If -workshops modeling projects. All projects should be combined to this repo.
