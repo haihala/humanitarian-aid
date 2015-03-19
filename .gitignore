@@ -52,3 +52,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# To prevent pycharm from flooding our repo with it's files
+.xml
+.iml
+.name
