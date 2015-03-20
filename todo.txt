@@ -1,0 +1,39 @@
+-Map
+    -drawing
+    -data
+-Parameters
+    -insert data
+    -make working run button
+-info
+    -display parameters and simulation results
+
+-simulation overall
+
+steps:
+
+step 1:
+Draw a map and make parameters usable (display on output and info). Possibly make things pretty
+
+step 2:
+Build a model that contains villages and make them run themselves for 5 year. (Make it possible for people to reproduce and die.)
+
+step 3:
+Enable road building and transportation in some manner.
+do
+step 4:
+Make functional networks that are build relatively intelligently.
+
+step 5:
+Debug for a few days.
+
+step 6:
+Run the model and show to Esa ==> receive all credit.
+
+step 7:
+Implement other models.
+
+step 8:
+
+repeat{
+    debug()
+}until(time ends)
