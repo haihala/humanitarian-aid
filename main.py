@@ -6,12 +6,6 @@ import pygame
 import os
 
 
-def kill():
-    """the while loop at the end requires this to end python when the window is closed"""
-    # possible actions before termination
-    sys.exit(2)  # enter random exit code here
-
-
 def draw():
     """"This is a function for drawing the map where things move"""
     screen1 = pygame.display.set_mode((100, 100))
@@ -46,9 +40,10 @@ runButton.grid(sticky=N+S+E+W)
 
 infoFrame = Frame(root)
 infoFrame.grid(row=2, column=1)
-testInfo = Text(infoFrame)
-testInfo.config(height=10)
-testInfo.grid(sticky=W+E+N+S)
+testInfo = Label(infoFrame, text="here is some text that updates based on the slider")
+testInfo.grid(sticky=W, row=1, column=1)
+data = Label(infoFrame, text=testParameters.get())
+data.grid(sticky=W, row=1, column=2)
 
 os.environ['SDL_WINDOWID'] = str(mapFrame.winfo_id())
 os.environ['SDL_VIDEODRIVER'] = 'windib'
@@ -59,9 +54,11 @@ pygame.display.update()
 
 draw()
 
-root.protocol('WM_DELETE_WINDOW', kill)  # because of the while loop it does not die when killed.
 
-root.mainloop()
-
-while True:
+def updateDisplay():
+    data.config(text=testParameters.get())
     pygame.display.update()
+    root.after(50, updateDisplay)  # reschedule event in 2 seconds
+
+root.after(50, updateDisplay)
+root.mainloop()
